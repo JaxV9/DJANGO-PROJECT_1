@@ -1,0 +1,18 @@
+{% extends "encyclopedia/layout.html" %}
+
+{% block title %}
+    Modification of this article
+{% endblock %}
+
+{% block body %}
+    <h1>Modification of this article</h1>
+    <form method="POST">
+        <div>
+            {{ mod }}
+        </div>
+        {% csrf_token %}
+
+        <input type="submit" value="Save the modifications">
+
+    </form>
+{% endblock %}
